@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Comparison</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    function compareInputs() {
+        // Retrieve user inputs
+        var firstInput = parseFloat(prompt("Enter the 1st input:"));
+        var secondInput = parseFloat(prompt("Enter the 2nd input:"));
+
+        // Check the conditions and perform actions
+        if (firstInput > secondInput) {
+            document.body.style.backgroundColor = "lightblue";
+            document.body.innerHTML = "<p>" + firstInput + " > " + secondInput + "</p>";
+        } else if (secondInput > firstInput) {
+            document.body.style.backgroundColor = "orange";
+            document.body.innerHTML = "<p>" + secondInput + " > " + firstInput + "</p>";
+        } else {
+            document.body.style.backgroundColor = "lightyellow";
+            document.body.innerHTML = "<p>" + secondInput + " == " + firstInput + "</p>";
+        }
+    }
+
+    function showFirstInput() {
+        var firstInput = parseFloat(prompt("Enter the 1st input:"));
+        alert("First Input: " + firstInput);
+    }
+
+    function showSecondInput() {
+        var secondInput = parseFloat(prompt("Enter the 2nd input:"));
+        alert("Second Input: " + secondInput);
+    }
+</script>
+
+<button onclick="showFirstInput()">Show 1st Input</button>
+<button onclick="showSecondInput()">Show 2nd Input</button>
+
+<button onclick="compareInputs()">Compare Inputs</button>
+
+</body>
+</html>
